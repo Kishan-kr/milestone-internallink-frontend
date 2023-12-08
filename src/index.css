@@ -1,13 +1,81 @@
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the page takes up at least the full viewport height */
+}
+.header {
+  background-color: #141F78;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative; /* Required for positioning the button */
+}
+.login-button {
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  right: 10px; /* Corrected the right position with "px" */
+  background-color: #ff5e00;
+  text-decoration: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.login-button:hover {
+  background-color: #0056b3;
+}    
+.widget-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.widget {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  flex: 1; /* Equal width for all widgets */
+  text-decoration: none;
+}
+.widget h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.footer {
+  background-color: #141F78;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto; /* Push the footer to the bottom of the page */
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3f3f3;
+}
+
+.spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
